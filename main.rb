@@ -1,6 +1,10 @@
-require_relative "./lib/prime_factors"
+$: << File.expand_path(File.join(File.dirname(__FILE__), "lib"))
+
+
+require "prime_factors_runner"
+require "console"
 
 print "Please enter a number: "
-input = gets.to_i
-factors = PrimeFactors.generate(input)
+runner = PrimeFactorsRunner.new(Console.new)
+factors = runner.generate_primes
 puts "Primes: #{factors}"
