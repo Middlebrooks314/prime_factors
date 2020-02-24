@@ -15,4 +15,13 @@ class PrimeFactorsRunner
         #        pass it to PrimeFactors.generate
         PrimeFactors.generate(parsed_input)
     end
+
+    def run
+        @console.print_message('Please enter a number: ')
+        return_prime_factors
+    end
+
+    def return_prime_factors
+        @console.print_message(generate_primes)
+    end
 end
