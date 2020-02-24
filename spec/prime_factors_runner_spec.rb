@@ -25,6 +25,8 @@ describe PrimeFactorsRunner do
         expect(primes).to eq([2, 2, 2])
     end
 
+
+    #currently failing because it runs the whole method without any input so it returns an empty array
     describe 'run' do
         it 'prompts the user to enter a number' do
             console = FakeConsole.new
