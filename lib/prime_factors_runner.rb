@@ -9,11 +9,12 @@ class PrimeFactorsRunner
         console_input = @console.get_input
 
         # convert that input from string to int
-
+        # return if !console_input 
         parsed_input = console_input.to_i
         # take converted input and
         #        pass it to PrimeFactors.generate
         PrimeFactors.generate(parsed_input)
+        
     end
 
     def run
@@ -22,6 +23,9 @@ class PrimeFactorsRunner
     end
 
     def return_prime_factors
-        @console.print_message(generate_primes)
+        numbers = generate_primes 
+        if !numbers.empty?
+            @console.print_message(numbers)
+        end
     end
 end

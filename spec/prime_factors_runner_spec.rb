@@ -14,17 +14,19 @@ class FakeConsole
         @last_string_printed = message
     end
 end
+
 describe PrimeFactorsRunner do
-    it 'returns a list of primes for a given input' do
-        console = FakeConsole.new
-        console.stub_get_input("8")
-        runner = PrimeFactorsRunner.new(console)
+    describe 'generate_primes' do
+        it 'returns a list of primes for a given input' do
+          console = FakeConsole.new
+          console.stub_get_input("8")
+          runner = PrimeFactorsRunner.new(console)
 
-        primes = runner.generate_primes
+          primes = runner.generate_primes
 
-        expect(primes).to eq([2, 2, 2])
-    end
-
+          expect(primes).to eq([2, 2, 2])
+      end
+  end
 
     #currently failing because it runs the whole method without any input so it returns an empty array
     describe 'run' do
