@@ -7,7 +7,6 @@ class PrimeFactorsRunner
     def generate_primes
         # use console to retrieve the input
         console_input = @console.get_input
-
         # convert that input from string to int
         # return if !console_input 
         parsed_input = console_input.to_i
